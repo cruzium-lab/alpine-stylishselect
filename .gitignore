@@ -1,0 +1,21 @@
+# os / software genereted files
+.DS_Store
+.vscode
+dwsync.xml
+thumbs.db
+
+# composer directory
+includes/library/*
+
+# log directories
+**/logs/*
+
+# upload directories
+**/mongo/*
+**/uploads/*
+
+# important files to track
+!.gitignore
+!.gitkeep
+!.ht*
+!web.config
