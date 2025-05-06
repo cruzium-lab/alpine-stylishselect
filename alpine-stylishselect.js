@@ -1,30 +1,30 @@
 /**
- * Alpine-Stylish Select - Alpine wrapper for jQuery Stylish Select.
- * @version 1.0.0
+ * Alpine wrapper for Stylish Select
+ * @version 1.0.4
  * @author Tony Leung <tony.leung@cruzium.com>
  * @copyright Copyright (c) 2025 Cruzium Digital
  * @license https://opensource.org/license/gpl-3-0/ GPL-3.0-only
  */
 
 'use strict';
-(function($) {
-	window.Alpine_stylishSelect = function(options) {
-		var handler = function(el, directive, utils) {
-			if (el.tagName.toLowerCase() != 'select' || el.hasAttribute('multiple') || !el.hasAttribute('x-model')) {
-				return;
-			}
-			$(el).stylishSelect(options);
+window.Alpine_stylishSelect = function(options) {
+	var handler = function(el, directive, utils) {
+		if (el.tagName.toLowerCase() != 'select' || el.hasAttribute('multiple')) {
+			return;
+		}
+		var instance = new StylishSelect(el, options);
+		if (el.hasAttribute('x-model')) {
 			var bound = utils.evaluateLater(el.getAttribute('x-model'));
 			utils.effect(function() {
 				bound(function() {
 					utils.Alpine.nextTick(function() {
-						$(el).stylishSelect('refresh');
+						instance.refresh();
 					});
 				});
 			});
-		};
-		return(function(Alpine) {
-			Alpine.directive('stylishselect', handler);
-		});
+		}
 	};
-})(jQuery);
+	return(function(Alpine) {
+		Alpine.directive('stylishselect', handler);
+	});
+};
