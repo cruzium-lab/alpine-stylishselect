@@ -1,6 +1,6 @@
 /**
  * Alpine wrapper for Stylish Select
- * @version 1.0.4
+ * @version 1.0.5
  * @author Tony Leung <tony.leung@cruzium.com>
  * @copyright Copyright (c) 2025 Cruzium Digital
  * @license https://opensource.org/license/gpl-3-0/ GPL-3.0-only
@@ -22,6 +22,13 @@ window.Alpine_stylishSelect = function(options) {
 					});
 				});
 			});
+			if (window.MutationObserver) {
+				new MutationObserver(function(mutations, observer) {
+					utils.evaluate(el.getAttribute('x-model') + ' = "' + el.value + '"');
+				}).observe(el, {
+					childList: true
+				});
+			}
 		}
 	};
 	return(function(Alpine) {
