@@ -16,7 +16,7 @@
 
 ```javascript
 document.addEventListener('alpine:init', function() {
-	Alpine.plugin(Alpine_stylishSelect(options));
+	Alpine.plugin(Alpine_stylishSelect());
 });
 ```
 or with global options
