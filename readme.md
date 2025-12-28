@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-- [Stylish Select](https://cdn.cruzium.info/plugin/stylish-select/)
+- [Stylish Select](https://github.com/cruzium-lab/stylish-select)
 
 ## Installation
 
@@ -44,11 +44,11 @@ Note: The plugin requires attribute `x-model` to work.
 
 ## Options
 
-Refer to [Options](https://cdn.cruzium.info/doc/stylish-select/latest/readme.md#options) section.
+Refer to [Options](https://github.com/cruzium-lab/stylish-select#options) section.
 
 ## Limitations
 
-Refer to [Limitiations](https://cdn.cruzium.info/doc/stylish-select/latest/readme.md#limitations) section.
+Refer to [Limitiations](https://github.com/cruzium-lab/stylish-select#limitations) section.
 
 ## Support This Project
 
