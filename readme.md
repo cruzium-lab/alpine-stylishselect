@@ -49,3 +49,7 @@ Refer to [Options](https://cdn.cruzium.info/doc/stylish-select/latest/readme.md#
 ## Limitations
 
 Refer to [Limitiations](https://cdn.cruzium.info/doc/stylish-select/latest/readme.md#limitations) section.
+
+## Support This Project
+
+[!["Buy Me a Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://buymeacoffee.com/cruziumdigital)
